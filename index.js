@@ -1,9 +1,3 @@
- 
- let Name = 'juhee';
- console.log(Name);
-
- // cannot be a reserved keyword
- // should be meaningful
- // cannot start with a number(1name)
- // cannot content space or hypen
- // are case-sensitive
+ const interestRate = '0.3';
+ //interestRate = 1;
+ console.log(interestRate);

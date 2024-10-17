@@ -5,3 +5,4 @@
  // cannot start with a number(1name)
  // cannot content space or hypen
  // are case-sensitive
+2. **constant**: The value of variables should be changed but the value of constant cannot change.
