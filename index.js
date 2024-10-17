@@ -1,6 +1,12 @@
- let name = 'juhee'; //string literal
- let age = 23; //number literal
- let isApproved = true; //boolean literal 
- let firstName = undefined;
- let selectedColor = null;
- 
+ let person = {
+    name: 'juhee',
+    age: 23
+
+ };
+
+ //dot notation 
+ person.name = 'john'
+
+ //bracket notation
+ person['name'] = 'mary'
+ console.log(person.name);
