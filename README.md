@@ -6,3 +6,4 @@
  // cannot content space or hypen
  // are case-sensitive
 2. **constant**: The value of variables should be changed but the value of constant cannot change.
+3. **Primitive types**: or value type:-> string, number, boolean, undefined, null
