@@ -9,3 +9,4 @@
 3. **Primitive types**: 1 value type:-> string, number, boolean, undefined, null
                         2 reference type:-> object , array, function
 4. **object**: {}object literal
+5. **function**: function name(){}, inside the curly braces is called the body of the function. , function can have multiple parameters. 
