@@ -16,8 +16,31 @@ let eligibleForLoan = highIncome || goodCredit;
 
 console.log("Eligible", eligibleForLoan); // true
 
-
 //NOT operator
 let applicationRefused = !eligibleForLoan;
 
-console.log("Application Refused", applicationRefused); // false  
+console.log("Application Refused", applicationRefused); // false
+
+// logical operator with non-booleans
+
+// Falsy (false)
+// undefined
+// null
+// 0
+// false
+// ''
+// NaN(not a number)
+
+// Anything that is not Falsy -> Truthy
+
+let userColor = "red";
+let defaultColor = "blue";
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor); // red
+
+let userColor = "undefined";
+let defaultColor = "blue";
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor); // blue
