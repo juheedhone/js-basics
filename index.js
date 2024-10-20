@@ -1,31 +1,23 @@
-let x = 1;
+// logical AND operator
+// The logical AND operator (&&) returns true if both operands are true; otherwise, returns false.
 
-//relational operators
- console.log(x > 1);
- console.log(x < 1);
- console.log(x <= 1);
- console.log(x >= 1);
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
 
-// //equality operators
+console.log(eligibleForLoan); // true
 
- console.log(x === 1);
-console.log(x !== 1);
+// logical OR operator
+// The logical OR operator (||) returns true if one of the operands is true; otherwise, returns false.
 
-// //equality operators (strict equality(type + value))
- console.log(1 === 1);
- console.log('1' === 1);
+let highIncome = false;
+let goodCredit = true;
+let eligibleForLoan = highIncome || goodCredit;
 
-//equality operators (loose equality(value))
- console.log(1 == 1);
- console.log('1' == 1);
-console.log(true == 1);
+console.log("Eligible", eligibleForLoan); // true
 
-//ternarry operator or conditional operator
 
-//if a cosutomer has more than 100 points,
-//they are a 'gold' customer, otherwise,
-//they are a 'silver' customer.
+//NOT operator
+let applicationRefused = !eligibleForLoan;
 
-let points = 10;
-let type = points < 11 ? "gold " : "silver";
-console.log(type);
+console.log("Application Refused", applicationRefused); // false  
