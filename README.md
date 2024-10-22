@@ -12,3 +12,4 @@
 5. **function**: function name(){}, inside the curly braces is called the body of the function. , function can have multiple parameters.;
 
 6. logical operators: &&, ||, ! (and, or, not) 
+7. **if else**: if(condition){} else{}
