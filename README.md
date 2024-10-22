@@ -13,3 +13,4 @@
 
 6. logical operators: &&, ||, ! (and, or, not) 
 7. **if else**: if(condition){} else{}
+8. **switch case**: switch(expression){case 1: break; case 2: break; default:}
