@@ -1,17 +1,18 @@
-// function maximum(num1, num2) {
-//   if (num1 > num2) console.log(num1);
-//   else console.log(num2);
-// }
+// divisible by 3 => Fizz
+// divisible by 5 => Buzz
+// divisible by 3 and 5 => FizzBuzz
+// not divisible by 3 or 5 => input
+// not a number => 'Not a number'
 
-// function minimum(num1, num2) {
-//   if (num1 > num2) console.log(num2);
-//   else console.log(num1);
-// }
+const output = fizzBuzz(15);
+console.log(output);
 
-// maximum(5, 7);
-// minimum(5, 7);
+function fizzBuzz(input) {
+  if (typeof input !== "number") return "not a number";
 
-console.log(isLandscape(300, 600));
-function isLandscape(width, height) {
-  return width > height;.
+  if (input % 3 === 0 && input % 5 == 0) return "fizzBuzz";
+
+  if (input % 3 === 0) return "fizz";
+
+  if (input % 5 === 0) return "buzz";
 }
