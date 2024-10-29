@@ -1,18 +1,19 @@
-// divisible by 3 => Fizz
-// divisible by 5 => Buzz
-// divisible by 3 and 5 => FizzBuzz
-// not divisible by 3 or 5 => input
-// not a number => 'Not a number'
+//
 
-const output = fizzBuzz(15);
+// speed limit = 70
+// 5 = 1 point
+// math.floor(1.3)
+// 12 points-> suspended
+
+const output = checkSpeed(112);
 console.log(output);
 
-function fizzBuzz(input) {
-  if (typeof input !== "number") return "not a number";
+function checkSpeed(speed) {
+  if (speed <= 70) return "ok";
 
-  if (input % 3 === 0 && input % 5 == 0) return "fizzBuzz";
+  let extraSpeed = speed - 70;
+  let points = Math.floor(extraSpeed / 5);
 
-  if (input % 3 === 0) return "fizz";
-
-  if (input % 5 === 0) return "buzz";
+  if (points > 12) return "suspended";
+  else return points + "points";
 }
