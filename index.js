@@ -1,16 +1,12 @@
-const movie = {
-  title: "a",
-  release: 2024,
-  director: "b",
-  name:'singham'
-};
+// multiple by 3 add 5
 
-// function showProperties(obj) {
-// for (let string in movie) console.log(string, movie[string]);
-showProperties(movie);
+sum(10);
 
-function showProperties(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] === "string") console.log(key,obj[key]);
+function sum(limit) {
+  let total = 0;
+
+  for (let i = 0; i <= limit; i++) {
+    if (i % 3 === 0 || i % 5 === 0) total = i + total;
   }
+  console.log(total);
 }
