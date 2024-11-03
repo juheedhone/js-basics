@@ -1,12 +1,24 @@
-// multiple by 3 add 5
+const marks = [80, 100, 100, 80];
 
-sum(10);
+// average=80
 
-function sum(limit) {
+// 1-59:F
+// 60-69:D
+// 70-79:C
+// 80-89:B
+// 90-100:A
+
+function calculateGrade(marks) {
   let total = 0;
+  for (let key of marks) total = key + total;
 
-  for (let i = 0; i <= limit; i++) {
-    if (i % 3 === 0 || i % 5 === 0) total = i + total;
-  }
-  console.log(total);
+  const average = total / marks.length;
+
+  if (average < 59) return "F";
+  else if (average < 69) return "D";
+  else if (average < 79) return "C";
+  else if (average < 89) return "B";
+  else return "A";
 }
+
+console.log(calculateGrade(marks));
