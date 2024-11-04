@@ -1,10 +1,16 @@
-showStars(50);
+showPrime(11);
 
-function showStars(rows) {
-  for (let row = 1; row <= rows; row++) {
-    let pattern = "";
-    for (let i = 0; i < row; i++) 
-        pattern += "*";
-    console.log(pattern);
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return num + " is composite";
+    }
+  }
+  return num + " is prime";
+}
+
+function showPrime(limit) {
+  for (let i = 2; i <= limit; i++) {
+    console.log(isPrime(i));
   }
 }
