@@ -1,10 +1,12 @@
-// constructor notation
+const circle = {
+  radius: 1,
+};
 
-function Circle(radius) {
-  this.radius = radius;
-  this.radius = function () {
-    console.log("draw");
-  };
-}
+circle.color = "yellow";
+circle.draw = function () {};
+delete circle.color;
+delete circle.draw;
 
-const circle = new Circle(1);
+// delete circle.color;
+
+console.log(circle);
