@@ -1,16 +1,15 @@
-showPrime(11);
+// object oriented programming(OPP)
 
-function isPrime(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return num + " is composite";
-    }
-  }
-  return num + " is prime";
-}
+let circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 2,
+  },
+  isVisible: true,
+  draw: function () {
+    console.log("draw");
+  },
+};
 
-function showPrime(limit) {
-  for (let i = 2; i <= limit; i++) {
-    console.log(isPrime(i));
-  }
-}
+circle.draw();  //method
