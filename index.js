@@ -1,15 +1,17 @@
-// object oriented programming(OPP)
+function createCircle(radius) {
+  return {
+    radius,
 
-let circle = {
-  radius: 1,
-  location: {
-    x: 1,
-    y: 2,
-  },
-  isVisible: true,
-  draw: function () {
-    console.log("draw");
-  },
-};
+    draw() {
+      console.log("draw");
+    },
+  };
+}
 
-circle.draw();  //method
+const circle1 = createCircle(2);
+console.log(circle1);
+
+const circle2 = createCircle(4);
+console.log(circle2);
+
+//method
