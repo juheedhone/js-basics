@@ -5,16 +5,12 @@ const circle = {
   },
 };
 
-// for in 
-for (let key in circle) console.log(key, circle[key]);
+// const another = {};
+// for (let key in circle) another[key] = circle[key];
 
+const another = Object.assign({}, circle);
 
-// for of
-for (let key of Object.keys(circle)) console.log(key, circle[key]);
+const other = { ...circle };
 
-// it return each value pair as an array.
-
-for (let entry of Object.entries(circle)) console.log(entry, circle[entry]);
-
-//in 
-if ("radius" in circle) console.log("yes");
+console.log(another);
+console.log(other);
