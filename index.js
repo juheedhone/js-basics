@@ -1,34 +1,20 @@
-// value or primitives types
+const circle = {
+  radius: 10,
+  draw() {
+    console.log("draw");
+  },
+};
 
-// example 1
-let x = 10;
-let y = x;
+// for in 
+for (let key in circle) console.log(key, circle[key]);
 
-x = 20;
 
-// example 2
-let number = 10;
-function increase(number) {
-  number++;
-}
+// for of
+for (let key of Object.keys(circle)) console.log(key, circle[key]);
 
-increase(number);
-console.log(number);
+// it return each value pair as an array.
 
-// reference types
+for (let entry of Object.entries(circle)) console.log(entry, circle[entry]);
 
-// example 1
-
-let i = { value: 10 };
-let j = x;
-
-i.value = 20;
-
-// example 2
-let obj = { value: 10 };
-function increase(obj) {
-  obj.value++;
-}
-
-increase(obj);
-console.log(obj);
+//in 
+if ("radius" in circle) console.log("yes");
