@@ -1,14 +1,22 @@
-const now = new Date();
-const date1 = new Date("may 11 2024 09:00");
-const date2 = new Date(2024, 4, 11, 9);
+// function showAddress(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode,
+//   };
+// }
 
-now.setFullYear(2024);
+// const address = showAddress("nagpur", "nagpur", 2);
+// console.log(address);
 
-// now.toDateString()
-// 'Fri Nov 08 2024'
+let address = {
+  street:": nagpur",
+  City: "nagpur",
+  zipCode: "2",
+};
 
-// now.toTimeString()
-// '14:49:17 GMT+0530 (India Standard Time)'
+function showAddress(address) {
+  for (let key in address) console.log(key, address[key]);
+}
 
-// now.toISOString()
-// '2024-11-08T09:19:17.778Z'
+showAddress(address);
