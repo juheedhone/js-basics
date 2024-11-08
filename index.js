@@ -1,16 +1,8 @@
-const circle = {
-  radius: 10,
-  draw() {
-    console.log("draw");
-  },
-};
+// string primitive
 
-// const another = {};
-// for (let key in circle) another[key] = circle[key];
+const message = "this is my first message";
+console.log(message);
 
-const another = Object.assign({}, circle);
+// string object
 
-const other = { ...circle };
-
-console.log(another);
-console.log(other);
+const another = new String("hi");
