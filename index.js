@@ -1,8 +1,7 @@
-// string primitive
+// boolean true,false
+// object {}
+// string '',""
+// template ``
 
-const message = "this is my first message";
-console.log(message);
-
-// string object
-
-const another = new String("hi");
+const another = `this is 
+my 'first' message`;
