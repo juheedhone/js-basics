@@ -1,22 +1,25 @@
-// function showAddress(street, city, zipCode) {
-//   return {
-//     street,
-//     city,
-//     zipCode,
-//   };
-// }
 
-// const address = showAddress("nagpur", "nagpur", 2);
-// console.log(address);
-
-let address = {
-  street:": nagpur",
-  City: "nagpur",
-  zipCode: "2",
-};
-
-function showAddress(address) {
-  for (let key in address) console.log(key, address[key]);
+// factory function
+function showAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode,
+  };
 }
 
-showAddress(address);
+const address = showAddress("nagpur", "nagpur", 2);
+console.log(address);
+
+
+
+// factory function
+
+function showAddress(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = 2;
+}
+
+const address2 = new showAddress("nagpur", "nagpur", 2);
+console.log(address);
