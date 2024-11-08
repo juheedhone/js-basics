@@ -1,25 +1,25 @@
+let address1 = new Address("a", "b", "c");
+let add2 = new Address("a", "b", "c");
 
-// factory function
-function showAddress(street, city, zipCode) {
-  return {
-    street,
-    city,
-    zipCode,
-  };
-}
-
-const address = showAddress("nagpur", "nagpur", 2);
-console.log(address);
-
-
+console.log(areEqual(address1, add2));
+console.log(areSame(address1, add2));
 
 // factory function
 
-function showAddress(street, city, zipCode) {
+function Address(street, city, zipCode) {
   this.street = street;
   this.city = city;
-  this.zipCode = 2;
+  this.zipCode = zipCode;
 }
 
-const address2 = new showAddress("nagpur", "nagpur", 2);
-console.log(address);
+function areEqual(address1, add2) {
+  return (
+    address1.street === add2.street &&
+    address1.city === add2.city &&
+    address1.zipCode === add2.zipCode
+  );
+}
+
+function areSame(address1, add2) {
+  return address1 === add2;
+}
