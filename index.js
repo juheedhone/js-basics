@@ -1,11 +1,7 @@
 const numbers = [3, 4];
 
-// end
-numbers.push(5, 6);
+console.log(numbers.indexOf(3));
+console.log(numbers.lastIndexOf(4));
+console.log(numbers.indexOf(1) !==1);
+console.log(numbers.includes(4));
 
-// beginning
-numbers.unshift(1, 2);
-
-// middle
-numbers.splice(2, 0, "a", "b");
-console.log(numbers);
