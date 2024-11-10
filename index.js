@@ -3,8 +3,7 @@ const courses = [
   { id: 2, name: "b" },
 ];
 
-const course = courses.find(function (course) {
-  return course.name === "xyz";
-});
+// arrow function
+const course = courses.find((course) => course.id === "a");
 
 console.log(course);
