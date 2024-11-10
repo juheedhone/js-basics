@@ -1,22 +1,24 @@
-// title
-// body
-// author
-// views
-// comment
-//  (author , body )
-// isLive
+let priceRange = [
+  {
+    label: "$",
+    tooltip: "inexpensive",
+    minimumPerPerson: 0,
+    maximumPerPerson: 10,
+  },
+  {
+    label: "$$",
+    tooltip: "moderate",
+    minimumPerPerson: 11,
+    maximumPerPerson: 20,
+  },
+  {
+    label: "$$$",
+    tooltip: "Expensive",
+    minimumPerPerson: 21,
+    maximumPerPerson: 50,
+  },
+];
 
-function Post(title, body, author) {
-  (this.title = title),
-    (this.body = body),
-    (this.author = author),
-    (this.views = 0),
-    (this.comment = {
-      author: "d",
-      body: "e",
-    }),
-    (this.isLive = isLive);
-}
+let restaurants = [{ averagePerPerson: 12 }];
 
-const object1 = new Post("a", "b", "c");
-console.log(object1);
+
