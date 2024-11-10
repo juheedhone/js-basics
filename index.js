@@ -1,12 +1,17 @@
-const numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-// end
-const last = numbers.pop();
+// solution 1
+numbers = [];
 
-// begging
-const first = numbers.shift();
+// solution 2
+numbers.length = 0;
 
-// // middle
-numbers.splice(2, 0);
+// solution 3
+numbers.splice(0, numbers.length);
+
+// solution 4
+while (numbers.length > 0) numbers.pop();
+
 console.log(numbers);
-console.log(first);
+console.log(another);
