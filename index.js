@@ -1,10 +1,6 @@
-const first = [1, 2, 3, 4];
-const second = [5, 6, 7, 8];
+const numbers = [1, 2, 3, 4];
 
-// const combined = first.concat(second);
-const combined = [...first, "a", "b", ...second];
+// for iterating arrays
+for (let number of numbers) console.log(number);
 
-// const slice = combined.slice(2, 4);
-const copy = [...combined];
-
-console.log(combined);
+numbers.forEach((number, index) => console.log(index, number));
