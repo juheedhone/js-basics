@@ -1,9 +1,12 @@
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
+const numbers = [1, 2, 3, 4];
 
-// arrow function
-const course = courses.find((course) => course.id === "a");
+// end
+const last = numbers.pop();
 
-console.log(course);
+// begging
+const first = numbers.shift();
+
+// // middle
+numbers.splice(2, 0);
+console.log(numbers);
+console.log(first);
