@@ -1,11 +1,6 @@
-const numbers = [1, 2, 3, 4];
+const numbers = [1, -1, 2, 3, 4];
 
-// every
-const allPositive = numbers.every((value) => value >= 0);
+// filter
+const filtered = numbers.filter((n) => n >= 0);
 
-console.log(allPositive);
-
-// some
-const atLeastOnePositive = numbers.some((value) => value >= 0);
-
-console.log(atLeastOnePositive);
+console.log(filtered);
