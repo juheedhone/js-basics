@@ -1,24 +1,11 @@
-// reducing array
 
-const numbers = [1, -1, 2, 3, 4];
+// exercise 1
+const numbers = arraysFromRange(-10, -4);
 
-// let sum = 0;
-// for (let n of numbers) sum += n;
+console.log(numbers);
 
-
-// a= 0 , c= 1 => a=1
-// a= 1, c= -1 => a=0
-// a= 0 , c= 2 => a=2
-// a= 2 , c= 3 => a=5
-
-
-// a= 1 , c= -1 => a=0
-// a= 0, c= 2 => a=2
-// a= 2, c= 3 => a=5
-
-
-const sum = numbers.reduce(
-  (accumulator, currentValue) => accumulator + currentValue
-);
-
-console.log(sum);
+function arraysFromRange(min, max) {
+  const output = [];
+  for (let i = min; i <= max; i++) output.push(i);
+  return output;
+}
