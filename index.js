@@ -1,31 +1,29 @@
-// exercise 4
-const numbers = [1, 2, 3, 4];
+const numbers = [11, 1, 2, 3, 4, 8, 9];
 
-console.log(move(numbers, 3, -2));
+const max = getMax([1, 2, 11]);
 
-function move(array, index, offset) {
-  let output = [];
-  const elementToMove = array[index];
-  const elementNewIndex = index + offset;
+function getMax(array) {
+  if (array.length === 0) return undefined;
 
-  if (elementNewIndex >= array.length && elementNewIndex < 0)
-    console.error("bad offset");
+//   solution 1
+    if ((maximum = Math.max(...array))) {
+      return maximum;
+    }
 
-  if ((offset = 0)) return array;
 
-  output =
-    offset > 0
-      ? [
-          ...array.slice(0, index),
-          ...array.slice(index + 1, elementNewIndex + 1),
-          elementToMove,
-          ...array.slice(elementNewIndex + 1),
-        ]
-      : [
-          ...array.slice(0, elementNewIndex),
-          elementToMove,
-          ...array.slice(elementNewIndex, index),
-          ...array.slice(index + 1),
-        ];
-  return output;
+//   solution 2
+    let max = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] > max) max = array[i];
+    }
+    return max;
+
+
+//   solution 3(reduced method)
+
+  return max = array.reduce((a, b) => (a > b )? a : b);
+  
 }
+
+console.log(max);
