@@ -1,10 +1,13 @@
-// Write a program to check if a given string is a palindrome (reads the same backward).
+// Write a function that takes a random number (1-100) and a guess, then returns whether the guess is too high, too low, or correct.
 
-function palindrome(word) {
-  for (let i = 0; i < Math.floor(word.length / 2); i++) {
-    if (word[i] !== word[word.length - 1 - i]) return false;
+
+function guessNumber(num) {
+  let number = 20;
+  {
+    if (num === number) return "correct";
+    else if (num < number) return "to low";
+    else if (num > number) return "to high";
   }
-  return true;
 }
 
-console.log(palindrome("radar"));
+console.log(guessNumber(25));
