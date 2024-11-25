@@ -1,13 +1,9 @@
-// Write a function that takes a random number (1-100) and a guess, then returns whether the guess is too high, too low, or correct.
+// Write a function that prints the multiplication table for a given number up to 10.
 
-
-function guessNumber(num) {
-  let number = 20;
-  {
-    if (num === number) return "correct";
-    else if (num < number) return "to low";
-    else if (num > number) return "to high";
+function multiplication(num) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(num * i);
   }
 }
 
-console.log(guessNumber(25));
+multiplication(5);
