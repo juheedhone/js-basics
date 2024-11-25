@@ -1,9 +1,11 @@
-// Write a function that prints the multiplication table for a given number up to 10.
+// Write a function that takes a number as input and returns whether it is “Positive,” “Negative,” or “Zero.”
 
-function multiplication(num) {
-  for (let i = 1; i <= 10; i++) {
-    console.log(num * i);
+function number(num) {
+  {
+    if (num < 0) return "negative";
+    else if (num > 0) return "positive";
+    else if (num === 0) return "zero";
   }
 }
 
-multiplication(5);
+console.log(number(0));
