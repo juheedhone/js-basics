@@ -1,11 +1,9 @@
-// Write a function that takes a number as input and returns whether it is “Positive,” “Negative,” or “Zero.”
+// . Find Numbers with Specific Conditions
 
-function number(num) {
-  {
-    if (num < 0) return "negative";
-    else if (num > 0) return "positive";
-    else if (num === 0) return "zero";
-  }
+// •	The number is divisible by 3 but not by 2.
+// •	The number is divisible by 5 but not by 4.
+
+for (let i = 1; i <= 100; i++) {
+  // if (i % 3 === 0 && i % 2 !== 0) console.log(i);
+  if (i % 5 === 0 && i % 4 !== 0) console.log(i);
 }
-
-console.log(number(0));
