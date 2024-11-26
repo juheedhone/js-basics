@@ -1,10 +1,15 @@
+// movie
+const movies = [
+  { title: "a", year: 2018, rating: 4.5 },
+  { title: "b", year: 2018, rating: 4.7 },
+  { title: "c", year: 2018, rating: 3 },
+  { title: "d", year: 2017, rating: 4.5 },
+];
 
-// Write a function to check whether a given year is a leap year.
-function leapYear(year) {
-  {
-    if (year % 4 === 0) return "leapYear";
-  }
-  return "not a leapYear";
-}
+const movie = movies
+  .filter((m) => m.year === 2018 && m.rating >= 4)
+  .sort((a, b) => a.rating - b.rating)
+  .reverse()
+  .map((m) => m.title);
 
-console.log(leapYear(2023));
+console.log(movie);
