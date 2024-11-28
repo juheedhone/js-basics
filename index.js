@@ -1,22 +1,40 @@
-// try and catch
+// SUM OF ARGUMENTS
 
-const person = {
-  firstName: "mosh",
-  lastName: "Hamedani",
+// solution1
 
-  set fullName(value) {
-    if (typeof value !== "string") throw new Error("value is not string");
-    const parts = value.split(" ");
-    if (parts.length !== 2) throw new Error("enter a first and last name");
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  },
-};
+// function sum(...arguments) {
+//   // console.log(arguments);
+//   // [[1, 2, 3, 4],[]];
+//   return arguments.reduce((a, b) => {
+//     if (Array.isArray(b)) {
+//       return a + b.reduce((e1, e2) => e1 + e2);
+//     }
+//     return a + b;
+//   }, 0);
+// }
+// console.log(sum([1, 2, 3, 4], [1, 2, 3, 4, 5]));
 
-try {
-  person.fullName = "";
-} catch (e) {
-  alert(e);
+
+// solution 2
+
+// function sum(...arguments) {
+//   // console.log(arguments);
+//   // [[1, 2, 3, 4],[4]];
+
+//   return arguments[0].reduce((a, b) => a + b);
+// }
+// console.log(sum([1, 2, 3, 4, 5],[4]));
+
+// solution 3
+
+function sum(...items) {
+  // console.log(arguments);
+  // [[1, 2, 3, 4],[4]];
+
+  if (items.length === 1 && Array.isArray(items[0])) {
+    items = [...items[0]];
+  }
+
+  return items.reduce((a, b) => a + b);
 }
-
-console.log(person);
+console.log(sum(1, 2, 3, 4, 5));
