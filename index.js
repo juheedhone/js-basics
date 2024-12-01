@@ -1,21 +1,15 @@
-// countOccurrence handling error
+// exercise flattenArray
 
-function countOccurrence(array, searchElement) {
-  if (!Array.isArray(array)) {
-    throw new Error("please give array");
+function flattenArray(array) {
+  let combined = array[0];
+  for (let i = 1; i < array.length; i++) {
+    combined = [...combined, ...array[i]];
   }
-  return array.reduce((accumulator, current) => {
-    const occurrence = current === searchElement ? 1 : 0;
-    console.log(accumulator, searchElement, current);
-    return accumulator + occurrence;
-  }, 0);
+  console.log(combined);
 }
 
-const number = [1, 2, 3, 4, 5, 2];
-
-try {
-  const count = countOccurrence(null, 2);
-  console.log(count);
-} catch (e) {
-  console.error(e.message);
-}
+flattenArray([
+  [1, 2],
+  [3, 4],
+  [3, 4],
+]);
